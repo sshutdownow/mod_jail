@@ -1,4 +1,6 @@
 # mod-jail
+[![C/C++ CI](https://github.com/sshutdownow/mod_jail/actions/workflows/c-cpp.yml/badge.svg)](https://github.com/sshutdownow/mod_jail/actions/workflows/c-cpp.yml)
+
 Running Apache HTTP server in jail/chroot can be tricky, this module allows to run Apache in a secure jail prison easy, without creating real jail environment containing copy of /lib, /libexec, /usr/lib, etc. Also, every jail has it's own [securelevel](http://www.freebsd.org/doc/en/books/faq/security.html#SECURELEVEL), and if you use [file flags](http://www.freebsd.org/cgi/man.cgi?query=chflags&sektion=2&apropos=0), it is possible to make some file can be changed only outside jail, even root in jail can't delete or modify file.
 **mod\_jail** is included in the official [FreeBSD's ports tree](https://www.freshports.org/www/mod_jail/).
 
@@ -18,7 +20,6 @@ Default **mod\_jail** settings are:
     jail_scrlevel  3
 </IfModule>
 ```
-
 ### Copyright
 
   Copyright (c) 2006-2025 Igor Popov
